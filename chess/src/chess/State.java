@@ -237,7 +237,7 @@ final public class State extends EnumMap<Index, HashSet<Index>> {
     final private static String SLASH = "/";
     final private static String NONE = "-";
     
-    public static State fromString(String fenString) {
+    public static State fromFEN(String fenString) {
         StringTokenizer tokenizer = new StringTokenizer(fenString);
         
         Piece[][] board = new Piece[RANK.length()][FILE.length()];
