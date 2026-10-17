@@ -261,10 +261,9 @@ final public class State extends EnumMap<Index, HashSet<Index>> {
         Side color = Side.valueOf(tokenizer.nextToken());
        
         LinkedHashSet<Index>[] castling = new LinkedHashSet[Side.values().length];
-        
-        for (int i = 0; i < castling.length; i++) {
-            castling[i] = new LinkedHashSet();
-        }
+
+        castling[[Side.w.ordinal()]] = new LinkedHashSet();
+        castling[[Side.b.ordinal()]] = new LinkedHashSet();
         
         for (char rook : tokenizer.nextToken().toCharArray()) {
             switch (rook) {
